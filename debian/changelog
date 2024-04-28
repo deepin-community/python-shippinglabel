@@ -1,5 +1,55 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-shippinglabel (1.7.1+dfsg-2) unstable; urgency=medium
 
-  * Initial release
+  * debian/control: fix maintainer name
+  * debian/patches/002.skip-test-error.partch: renamed numbering
+  * debian/patches/003.skip-test-with-error.patch: (Closes: #1066748)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Thu, 14 Mar 2024 06:46:14 -0300
+
+python-shippinglabel (1.7.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 1.7.1+dfsg
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Sat, 03 Feb 2024 14:14:44 -0300
+
+python-shippinglabel (1.6.0+dfsg-2) unstable; urgency=medium
+
+  * debian/control:
+     - Added dependency for running tests
+     - Added 'Testsuite: autopkgtest-pkg-pybuild'
+  * debian/rules: Enabled test execution
+  * debian/patches: Skipped function with error
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Tue, 02 Jan 2024 23:51:50 -0300
+
+python-shippinglabel (1.6.0+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 1.6.0+dfsg
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Thu, 14 Dec 2023 20:47:31 -0300
+
+python-shippinglabel (1.5.0+dfsg-4) unstable; urgency=medium
+
+  * debian/control: Added Build-Depends: python3-trove-classifiers
+  * debian/patches/: Swapped module to import directly from trove_classifiers
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Wed, 15 Nov 2023 16:33:39 -0300
+
+python-shippinglabel (1.5.0+dfsg-3) unstable; urgency=medium
+
+  * debian/control: Removing unnecessary dependencies
+  * debian/patches: Disabled import violation dfsg
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Tue, 14 Nov 2023 21:29:55 -0300
+
+python-shippinglabel (1.5.0+dfsg-2) unstable; urgency=medium
+
+  * debian/control: Added build-depends necessary
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Sat, 11 Nov 2023 18:34:28 -0300
+
+python-shippinglabel (1.5.0+dfsg-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #1027763)
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Sun, 22 Oct 2023 06:22:56 -0300

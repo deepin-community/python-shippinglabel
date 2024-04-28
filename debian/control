@@ -1,15 +1,58 @@
-Source: template-repository
-Section: unknown
+Source: python-shippinglabel
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>
+Rules-Requires-Root: no
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               pybuild-plugin-pyproject,
+               python3-all,
+               python3-apeye,
+               python3-betamax,
+               python3-coincidence,
+               python3-consolekit,
+               python3-coverage,
+               python3-dist-meta,
+               python3-dom-toml,
+               python3-domdf-python-tools,
+               python3-importlib-metadata,
+               python3-packaging,
+               python3-pip,
+               python3-platformdirs,
+               python3-pytest,
+               python3-pytest-cov,
+               python3-pytest-regressions,
+               python3-pytest-rerunfailures,
+               python3-pytest-timeout,
+               python3-requests,
+               python3-setuptools,
+               python3-trove-classifiers,
+               python3-typing-extensions
+Standards-Version: 4.6.2
+Homepage: https://github.com/domdfcoding/shippinglabel
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-shippinglabel
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-shippinglabel.git
+Testsuite: autopkgtest-pkg-pybuild
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-shippinglabel
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends}
+Description: Utilities for handling packages
+ Module developed with the aim of assisting the developer in managing
+ packages with the following functions:
+  - Returns the web links for the given project.
+  - Useful for creating and verifying sha256 checksums of files.
+  - Useful for working with trove classifiers.
+  - Useful for working with the Python Package Index (PyPI).
+  - Useful for working with PEP 508 requirements.
+  - Useful for working with source distributions.
+  - Serves to assist in building conda packages.
+  - Returns the subset of versions that do not end with -dev.
+  - Returns the subset of versions that are not pre-releases
+    (alpha, beta, dev, rc etc.).
+    packages.
+  - Reads the pyvenv.cfg for the given virtualenv and returns a key:
+    value mapping of your content.
+  - among other features.

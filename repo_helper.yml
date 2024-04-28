@@ -1,0 +1,76 @@
+# Configuration for 'repo_helper' (https://github.com/domdfcoding/repo_helper)
+---
+modname: 'shippinglabel'
+copyright_years: '2020-2022'
+author: 'Dominic Davis-Foster'
+email: 'dominic@davis-foster.co.uk'
+username: 'domdfcoding'
+version: '1.7.1'
+license: 'MIT'
+short_desc: 'Utilities for handling packages.'
+
+python_versions:
+ - '3.6'
+ - '3.7'
+ - '3.8'
+ - '3.9'
+ - "3.10"
+ - "3.11"
+ - "3.12"
+ - 3.13-dev
+ - pypy36
+ - pypy37
+ - pypy38
+ - pypy39
+
+conda_channels:
+ - conda-forge
+
+sphinx_conf_epilogue:
+ - html_logo = "../shippinglabel.png"
+ - latex_logo = "../shippinglabel.png"
+ - latex_elements["preamble"] = "\\usepackage{marvosym}"
+ - nitpicky = True
+ - needspace_amount = r"5\baselineskip"
+ - ignore_missing_xrefs = ["^packaging.utils.InvalidSdistFilename$", "^wheel_filename"]
+
+keywords:
+ - packaging
+ - requirements
+ - pypi
+ - conda
+
+min_coverage: 95
+docs_fail_on_warning: true
+on_conda_forge: true
+pre_commit_exclude: "^shippinglabel._vendor/"
+
+additional_ignore:
+ - _metadata.py
+ - demo.py
+
+extra_sphinx_extensions:
+ - sphinx_toolbox.more_autosummary.column_widths
+ - sphinx_packaging.peps
+ - sphinx_toolbox_experimental.missing_xref
+ - local_extension
+
+exclude_files:
+ - contributing
+
+classifiers:
+ - 'Development Status :: 5 - Production/Stable'
+ - 'Intended Audience :: Developers'
+ - 'Topic :: Software Development :: Libraries :: Python Modules'
+ - "Topic :: System :: Archiving :: Packaging"
+
+manifest_additional:
+ - recursive-include shippinglabel/_vendor *
+ - prune **/__pycache__
+
+tox_unmanaged:
+ - "coverage:run"
+
+intersphinx_mapping:
+ - "'requests': ('https://requests.readthedocs.io/en/latest/', None)"
+ - "'pypi-json': ('https://pypi-json.readthedocs.io/en/latest/', None)"
