@@ -1,0 +1,3 @@
+- iniconfig
+- packaging
+- pluggy<2.0,>=0.12

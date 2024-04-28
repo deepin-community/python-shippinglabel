@@ -1,0 +1,23 @@
+Description: Import disabled for dfsg violation
+Author: Josenilson Ferreira da Silva <nilsonfsilva@hotmai.com>
+Forwarded: not-needed
+Last-Update: 2023-11-14
+Index: python-shippinglabel/shippinglabel/classifiers.py
+===================================================================
+--- python-shippinglabel.orig/shippinglabel/classifiers.py
++++ python-shippinglabel/shippinglabel/classifiers.py
+@@ -35,7 +35,13 @@ from domdf_python_tools.utils import std
+ 
+ # this package
+ from shippinglabel import normalize
+-from shippinglabel._vendor import trove_classifiers
++
++"""
++import disabled because the /shippinglabel/_vendor directory
++was excluded from the debian packaging.
++"""
++import trove_classifiers
++
+ from shippinglabel.requirements import ComparableRequirement
+ 
+ __all__ = ["validate_classifiers", "classifiers_from_requirements"]
